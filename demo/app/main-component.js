@@ -1,4 +1,4 @@
-import { GeneralComponent } from '../tomcruz/general-component';
+import { GeneralComponent } from '../../tomcruz/general-component';
 
 export class MainComponent extends GeneralComponent{
   constructor(parameters) {
