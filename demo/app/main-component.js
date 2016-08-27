@@ -1,6 +1,6 @@
-import { GeneralComponent } from '../../tomcruz/general-component';
+import { TomcruzComponent } from '../../tomcruz/tomcruz-component';
 
-export class MainComponent extends GeneralComponent{
+export class MainComponent extends TomcruzComponent{
   constructor(parameters) {
     super(parameters);
     console.log(this);
