@@ -1,0 +1,23 @@
+{
+  "name": "tomcruz",
+  "version": "1.0.0",
+  "description": "Purely TS/JS framework ever",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artem Koziar [temich] <a@temich.in.ua>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/temich666/tomcruz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/temich666/tomcruz/issues"
+  },
+  "homepage": "https://github.com/temich666/tomcruz#readme",
+  "license": "ISC",
+  "devDependencies": {
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^0.8.2"
+  }
+}
