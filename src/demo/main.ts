@@ -8,5 +8,3 @@ const main = new MainComponent({
 
 const app = new Tomcruz();
 app.render('main-component', main);
-
-console.log('123');
