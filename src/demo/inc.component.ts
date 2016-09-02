@@ -1,10 +1,11 @@
-import {TomcruzComponent} from '../tomcruz/tomcruz-component';
+import {Tomcruz} from '../tomcruz/tomcruz';
+import {TomcruzComponent} from '../tomcruz/tomcruz.component';
 
 export class IncComponent extends TomcruzComponent {
     counter: number;
 
-    constructor(parameters = {}) {
-        super(parameters);
+    constructor(tomcruz: Tomcruz, parameters = {}) {
+        super(tomcruz, parameters);
         console.log(`IncComponent.constructor(${parameters})`);
     }
 
@@ -24,12 +25,10 @@ export class IncComponent extends TomcruzComponent {
             element.innerHTML = html;
         }
 
-        this.addEvents();
-
         return html;
     }
 
-    addEvents() {
+    afterRender() {
         let elementsCollection = document.getElementsByClassName('inc-component__btn');
         console.log('l:', elementsCollection.length, elementsCollection);
         for(let i = 0; i <= elementsCollection.length; i++) {

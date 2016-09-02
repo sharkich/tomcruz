@@ -1,6 +1,8 @@
-import {TomcruzComponent} from './tomcruz-component';
+import {TomcruzComponent} from './tomcruz.component';
 
 export class Tomcruz {
+
+    components: TomcruzComponent[] = [];
 
     /**
      * @param {object} options
@@ -10,11 +12,16 @@ export class Tomcruz {
     }
 
     /**
-     * Render component to HTML-element with specific ID
-     * @param {string} elementID
-     * @param {object} component
+     * Register Component for add events after rendering and other
+     * @param component
+     * @return {string} - ID of new element
      */
-    render(elementID: any, component:TomcruzComponent, template: string) {
-        console.log(`Tomcruz.render(${elementID}, ${component})`);
+    registerComponent(component: TomcruzComponent): TomcruzComponent {
+        this.components.push(component);
+        console.log(`Tomcruz.registerComponent(${component})`, this.components);
+        if (!component.id) {
+            component.id = `-tomcruz-${this.components.length}`;
+        }
+        return component;
     }
 }

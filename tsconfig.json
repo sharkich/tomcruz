@@ -9,8 +9,7 @@
     },
     "files": [
         "./typings/index.d.ts",
-
-        "./src/tomcruz/tomcruz-component.ts",
+        "./src/tomcruz/tomcruz.component.ts",
         "./src/tomcruz/tomcruz.ts",
         "./src/demo/inc.component.ts",
         "./src/demo/main.component.ts",

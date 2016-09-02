@@ -1,4 +1,5 @@
-import {TomcruzComponent} from '../tomcruz/tomcruz-component';
+import {Tomcruz} from '../tomcruz/tomcruz';
+import {TomcruzComponent} from '../tomcruz/tomcruz.component';
 
 import {IncComponent} from './inc.component';
 
@@ -7,15 +8,15 @@ export class MainComponent extends TomcruzComponent {
     list: string[] = [];
     incs: IncComponent[] = [];
 
-    constructor(parameters = {}) {
-        super(parameters);
+    constructor(tomcruz: Tomcruz, parameters = {}) {
+        super(tomcruz, parameters);
         console.log(`MainComponent.constructor(${parameters})`);
 
-        this.incs.push(new IncComponent({
+        this.incs.push(new IncComponent(this.tomcruz, {
             counter: 666
         }));
 
-        this.incs.push(new IncComponent({
+        this.incs.push(new IncComponent(this.tomcruz, {
             counter: 777
         }));
     }
