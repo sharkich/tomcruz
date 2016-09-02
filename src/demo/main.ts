@@ -6,6 +6,10 @@ const main = new MainComponent({
     counter: 666
 });
 
+main.list.push('x1');
+main.list.push('x1x');
+main.list.push('xXx');
+
 main.render(document.getElementById('main-component'));
 
 // const app = new Tomcruz();
