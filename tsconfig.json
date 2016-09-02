@@ -12,8 +12,8 @@
 
         "./src/tomcruz/tomcruz-component.ts",
         "./src/tomcruz/tomcruz.ts",
-
-        "./src/demo/main-component.ts",
+        "./src/demo/inc.component.ts",
+        "./src/demo/main.component.ts",
         "./src/demo/main.ts"
     ]
 }

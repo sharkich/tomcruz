@@ -1,5 +1,5 @@
 import {Tomcruz} from '../tomcruz/tomcruz';
-import {MainComponent} from './main-component';
+import {MainComponent} from './main.component';
 
 const main = new MainComponent({
     title: 'Hello world!',

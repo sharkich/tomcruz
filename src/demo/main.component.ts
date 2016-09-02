@@ -1,13 +1,23 @@
 import {TomcruzComponent} from '../tomcruz/tomcruz-component';
 
+import {IncComponent} from './inc.component';
+
 export class MainComponent extends TomcruzComponent {
     title: string;
-    counter: number;
     list: string[] = [];
+    incs: IncComponent[] = [];
 
     constructor(parameters = {}) {
         super(parameters);
         console.log(`MainComponent.constructor(${parameters})`);
+
+        this.incs.push(new IncComponent({
+            counter: 666
+        }));
+
+        this.incs.push(new IncComponent({
+            counter: 777
+        }));
     }
 
     renderList(): string {
@@ -25,10 +35,12 @@ export class MainComponent extends TomcruzComponent {
 
     render(element: HTMLElement): string {
         return element.innerHTML = `
-            <div>
+            <div class="main-component">
                 <h1>${this.title}</h1>
-                <p>Counter: ${this.counter}</p>
                 ${this.renderList()}
+                <hr>
+                ${this.incs[0].render()}
+                <hr>
             </div>
         `;
     }
