@@ -6,5 +6,7 @@ const main = new MainComponent({
     counter: 666
 });
 
-const app = new Tomcruz();
-app.render('main-component', main);
+main.render(document.getElementById('main-component'));
+
+// const app = new Tomcruz();
+// app.render(document.getElementById('main-component'), main, );

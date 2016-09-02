@@ -14,7 +14,7 @@ export class Tomcruz {
      * @param {string} elementID
      * @param {object} component
      */
-    render(elementID: string, component:TomcruzComponent ) {
+    render(elementID: any, component:TomcruzComponent, template: string) {
         console.log(`Tomcruz.render(${elementID}, ${component})`);
     }
 }
